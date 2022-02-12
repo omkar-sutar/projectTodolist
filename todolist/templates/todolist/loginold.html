@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Todo- Login</title>
+</head>
+<body>
+    {% if error %}
+    {{error}}
+    {%endif%}
+    <form action="{% url 'todolist:login'%}" method="post">
+        {%csrf_token%}
+        <input type="text" placeholder="username" name="username">
+        <br>
+        <input type="password" placeholder="password" name="password">
+        <button type="submit" value="Login">Login</button>
+    </form>
+</body>
